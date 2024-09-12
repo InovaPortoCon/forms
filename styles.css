@@ -1,0 +1,159 @@
+Reset básico para garantir consistência entre navegadores
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to right, rgba(16, 64, 143, 0.8), rgba(228, 75, 18, 0.8));
+    /* Gradiente com opacidade aumentada */
+}
+
+/* Estilo do cabeçalho */
+/* .header {
+    background-color: #ffffff;
+    border-bottom: 5px solid #e44b12; 
+    padding: 20px;
+    text-align: center;
+    position: block;
+    display: block;
+} */
+
+.IMAGEM{
+    max-width: 100px; /* Aumentar o tamanho da logo */
+    height: 30px;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
+    text-align: right;
+}
+
+.header img:hover {
+    transform: scale(1.1); /* Efeito de zoom na logo */
+}
+
+.header a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e44b12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #e44b12; /* Borda laranja para o link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animação suave de cor */
+}
+
+.header a:hover {
+    background-color: #e44b12;
+    color: #ffffff;
+}
+
+/* Estilo do vídeo */
+/* ... (rest of the code remains the same) */
+
+/* Estilo do vídeo */
+.video-container {
+    position: relative;
+    width: 450px; /* Set a fixed width and height to create a small square */
+    height: 650px;
+    margin: 5px auto;
+    background-color: #000; /* Cor de fundo caso o vídeo não carregue */
+    border: 5px solid #10408f; /* Contorno azul */
+    border-radius: 15px; /* Cantos arredondados mais acentuados */
+    margin-top: 100;
+}
+
+/* Estilo para o elemento de vídeo */
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que o vídeo cubra o contêiner sem distorção */
+    background-color: #000; /* Cor de fundo caso o vídeo não carregue */
+    transition: border-color 0.3s ease; /* Animação suave para o contorno */
+}
+video:hover {
+    border-color: #e44b12; /* Mudar a cor do contorno ao passar o mouse */
+}
+
+/* Estilo dos editais */
+.editais {
+    text-align: center;
+    margin: 60px auto; /* Adjusted margin to create space between video and editais */
+}
+
+.editais a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e44b12;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: -50%;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animação suave de cor e escala */
+}
+
+.editaisDIV{
+    padding: 10px 20px;
+    margin-top: 0; /* Removed margin-top to avoid pushing the editais down */
+    z-index: 1;
+}
+
+.editais a:hover {
+    background-color: #10408f;
+    transform: scale(1.05); /* Efeito de zoom nos botões */
+}
+
+/* Estilo do rodapé */
+
+
+.footer img {
+    max-width: 200px; /* Aumentar o tamanho da logo no rodapé */
+    height: auto;
+    margin: center;
+    transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
+}
+.footer img:hover {
+    transform: scale(1.1); /* Efeito de zoom na logo */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+.editais {
+    text-align: center;
+    margin: 60px auto;
+}
+.footer {
+    background-color: #ffffff;
+    border-top: 5px solid #e44b12;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50%;
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+*:fullscreen {
+    .container {
+        height: 100vh;
+    }
+    .editais {
+        margin-top: 0; 
+    }
+    .footer {
+        margin-top: 20px; 
+    }
+}
